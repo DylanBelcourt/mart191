@@ -53,7 +53,7 @@ function draw() {
 
   push();
   translate(250,100);
-  strokeCap(0, 0, 0);
+  stroke(0, 0, 0);
   strokeWeight(4);
   triangle(40, 55, 58, 40, 76, 79);
   pop();
