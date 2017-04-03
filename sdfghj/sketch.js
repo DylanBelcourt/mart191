@@ -1,20 +1,20 @@
 
 var cones = [];
 var fall = 3;
-
+var bg = (117, 252, 255);
 
 
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
-  background(117, 252, 255);
-  for (var i = 0; i < 8; i++) {
+  background(bg);
+  for (var i = 0; i < 7; i++) {
     cones.push( new Icecream((i + 1) * 150, 100));
   }
 }
 
 function draw() {
-  background(117, 252, 255, 15);
+  background(bg, 15);
 
 
   for (var i = 0; i < cones.length; i++) {
