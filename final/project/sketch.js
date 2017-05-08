@@ -32,7 +32,7 @@ function setup() {
   textSize(100);
   fill(100);
   textFont("molleat");
-  text("MY MUSIC VISUALZER",200,(height - 5));
+  text("MY MUSIC VISUALIZER",200,(height - 5));
 
   pop();
   currFrameRate = frameRate(60);
