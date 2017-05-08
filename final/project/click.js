@@ -7,13 +7,14 @@ function Button(x,y,w,h,id,color){
   this.isPressed = false;
   this.id = id;
   this.color = color;
+  this.curcolor = this.color;
 }
 
 Button.prototype.draw = function(){
 
   push();
   translate(this.x, this.y);
-  fill(this.color);
+  fill(this.curcolor);
   // fill(55,200,165);
   rect(0, 0,this.w,this.h);
   pop();
@@ -63,17 +64,17 @@ Button.prototype.try = function(){
     mouseY <= this.y + this.h
   ){
     if(mouseIsPressed){
-      this.color = color(82, 168, 175);
+      this.curcolor = color(0,0,0,15);
 
     } else {
-      this.color = color(160, 247, 255);
+      this.curcolor = color(255,255,255,70);
     }
   }else{
-    this.color = color(0,255,255);
+    this.curcolor = this.color;
   }
 };
 
 Button.prototype.reset = function() {
-  this.color = color(0,255,255);
+  this.curcolor = this.color;
   this.isPressed = false;
 };
